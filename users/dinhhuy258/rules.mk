@@ -1,5 +1,8 @@
 ifeq ($(strip $(OLED_ENABLE)), yes)
     SRC += $(USER_PATH)/oled/oled.c
+
+	# For dog animation
+	WPM_ENABLE = yes
 endif
 
 # Enables Link Time Optimization (LTO) when compiling the keyboard.

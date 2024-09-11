@@ -15,19 +15,6 @@ static const char PROGMEM mac_logo[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
 /* KEYBOARD PET START */
 
-/* settings */
-#define MIN_WALK_SPEED 10
-#define MIN_RUN_SPEED 40
-
-/* advanced settings */
-#define ANIM_FRAME_DURATION 200 // how long each frame lasts in ms
-
-/* timers */
-uint32_t anim_timer = 0;
-
-/* current frame */
-uint8_t current_frame = 0;
-
 /* status variables */
 int   current_wpm = 0;
 led_t led_usb_state;
@@ -35,65 +22,6 @@ led_t led_usb_state;
 bool isSneaking = false;
 bool isJumping  = false;
 bool showedJump = true;
-
-/* logic */
-static void render_luna(int LUNA_X, int LUNA_Y) {
-    /* animation */
-    void animate_luna(void) {
-        /* jump */
-        if (isJumping || !showedJump) {
-            /* clear */
-            oled_set_cursor(LUNA_X, LUNA_Y + 2);
-            oled_write("     ", false);
-
-            oled_set_cursor(LUNA_X, LUNA_Y - 1);
-
-            showedJump = true;
-        } else {
-            /* clear */
-            oled_set_cursor(LUNA_X, LUNA_Y - 1);
-            oled_write("     ", false);
-
-            oled_set_cursor(LUNA_X, LUNA_Y);
-        }
-
-        /* switch frame */
-        current_frame = (current_frame + 1) % 2;
-
-        /* current status */
-        if (led_usb_state.caps_lock) {
-            oled_write_raw_P(bark[current_frame], ANIM_SIZE);
-
-        } else if (isSneaking) {
-            oled_write_raw_P(sneak[current_frame], ANIM_SIZE);
-
-        } else if (current_wpm <= MIN_WALK_SPEED) {
-            oled_write_raw_P(sit[current_frame], ANIM_SIZE);
-
-        } else if (current_wpm <= MIN_RUN_SPEED) {
-            oled_write_raw_P(walk[current_frame], ANIM_SIZE);
-
-        } else {
-            oled_write_raw_P(run[current_frame], ANIM_SIZE);
-        }
-    }
-
-#if OLED_TIMEOUT > 0
-    /* the animation prevents the normal timeout from occuring */
-    if (last_input_activity_elapsed() > OLED_TIMEOUT && last_led_activity_elapsed() > OLED_TIMEOUT) {
-        oled_off();
-        return;
-    } else {
-        oled_on();
-    }
-#endif
-
-    /* animation timer */
-    if (timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION) {
-        anim_timer = timer_read32();
-        animate_luna();
-    }
-}
 
 /* KEYBOARD PET END */
 
@@ -154,7 +82,7 @@ static void print_status_narrow(void) {
 
     /* KEYBOARD PET RENDER START */
 
-    render_luna(0, 13);
+    render_dog(0, 13, current_wpm);
 
     /* KEYBOARD PET RENDER END */
 }

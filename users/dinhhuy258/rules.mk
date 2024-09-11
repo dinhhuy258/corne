@@ -1,6 +1,7 @@
 ifeq ($(strip $(OLED_ENABLE)), yes)
     SRC += $(USER_PATH)/oled/oled.c
     SRC += $(USER_PATH)/oled/dog.c
+    SRC += $(USER_PATH)/process_records.c
 
 	# For dog animation
 	WPM_ENABLE = yes

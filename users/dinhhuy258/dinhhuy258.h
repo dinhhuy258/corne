@@ -41,15 +41,15 @@ enum layers {
 #define ___________________MOU_R3__________________       LGUI(KC_F20),    LGUI(KC_F19),    LGUI(KC_F18),    LGUI(KC_F17),    LGUI(KC_GRAVE)
 #define ______________MOU_THUMB_RIGHT______________       LGUI(KC_F13),    MS_BTN2
 
-#define ___________________SYM_L1__________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
-#define ___________________SYM_L2__________________       LGUI_T(KC_A),    LALT_T(KC_S),    LCTL_T(KC_D),    LSFT_T(KC_F),    HYPR_T(KC_G)
-#define ___________________SYM_L3__________________       KC_Z,            KC_X,            KC_C,            KC_V,            KC_B
-#define ______________SYM_THUMB_LEFT_______________       KC_ESC,          KC_SPC
+#define ___________________SYM_L1__________________       KC_AMPR,         KC_ASTR,         KC_LCBR,         KC_RCBR,         KC_GRV
+#define ___________________SYM_L2__________________       KC_CIRC,         KC_DLR,          KC_LPRN,         KC_RPRN,         KC_TILD
+#define ___________________SYM_L3__________________       KC_PERC,         KC_HASH,         KC_LBRC,         KC_RBRC,         KC_QUES
+#define ______________SYM_THUMB_LEFT_______________       _______,         _______
 
-#define ___________________SYM_R1__________________       KC_Y,            KC_U,            KC_I,            KC_O,            KC_P
-#define ___________________SYM_R2__________________       HYPR_T(KC_H),    LSFT_T(KC_J),    LCTL_T(KC_K),    LALT_T(KC_L),    LGUI_T(KC_SCLN)
-#define ___________________SYM_R3__________________       KC_N,            KC_M,            KC_COMM,         KC_DOT,          KC_SLSH
-#define ______________SYM_THUMB_RIGHT______________       KC_ENT,          KC_BSPC
+#define ___________________SYM_R1__________________       KC_AT,           KC_PLUS,         KC_UNDS,         KC_PIPE,         KC_COLON
+#define ___________________SYM_R2__________________       KC_EXLM,         KC_EQL,          KC_MINS,         KC_BSLS,         KC_SCLN
+#define ___________________SYM_R3__________________       KC_QUOT,         KC_DQUO,         KC_COMM,         KC_DOT,          KC_SLSH
+#define ______________SYM_THUMB_RIGHT______________       _______,         _______
 
 #define ___________________NUM_L1__________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
 #define ___________________NUM_L2__________________       LGUI_T(KC_A),    LALT_T(KC_S),    LCTL_T(KC_D),    LSFT_T(KC_F),    HYPR_T(KC_G)

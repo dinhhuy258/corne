@@ -32,6 +32,10 @@ enum layers {
     NUM,
 };
 
+enum keycodes {
+    SWITCH_APP = SAFE_RANGE, // Switch to next window (cmd-tab)
+};
+
 // clang-format off
 #define __________________BASE_L1__________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
 #define __________________BASE_L2__________________       LGUI_T(KC_A),    LOPT_T(KC_S),    LCTL_T(KC_D),    LSFT_T(KC_F),    HYPR_T(KC_G)
@@ -49,7 +53,7 @@ enum layers {
 #define ______________NAV_THUMB_LEFT_______________       _______,         _______
 
 #define ___________________NAV_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         LSG(KC_TAB)
-#define ___________________NAV_R2__________________       KC_LEFT,         KC_DOWN,         KC_UP,           KC_RGHT,         LGUI(KC_TAB)
+#define ___________________NAV_R2__________________       KC_LEFT,         KC_DOWN,         KC_UP,           KC_RGHT,         SWITCH_APP
 #define ___________________NAV_R3__________________       NAV_LEFT,        VIM_LEFT,        VIM_RIGHT,       NAV_RIGHT,       LGUI(KC_GRAVE)
 #define ______________NAV_THUMB_RIGHT______________       _______,          _______
 

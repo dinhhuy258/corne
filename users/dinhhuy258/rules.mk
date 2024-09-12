@@ -1,11 +1,6 @@
-ifeq ($(strip $(OLED_ENABLE)), yes)
-    SRC += $(USER_PATH)/oled/oled.c
-    SRC += $(USER_PATH)/oled/dog.c
-    SRC += $(USER_PATH)/process_records.c
+include $(USER_PATH)/oled/rules.mk
 
-	# For dog animation
-	WPM_ENABLE = yes
-endif
+SRC += $(USER_PATH)/swapper.c
 
 MOUSEKEY_ENABLE = yes
 

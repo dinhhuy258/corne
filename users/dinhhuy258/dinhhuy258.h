@@ -4,6 +4,25 @@
 
 #define TMUX_PREFIX LCTL(KC_F)
 #define VIM_PREFIX KC_SCLN
+#define SCREENSHOT HYPR(KC_4)
+#define NAV_LEFT KC_F23
+#define NAV_RIGHT KC_F24
+#define VIM_LEFT LSFT(KC_LEFT)
+#define VIM_RIGHT LSFT(KC_RIGHT)
+#define MOU_MAX_SPEED LGUI(KC_F14)
+#define MOU_MIN_SPEED LGUI(KC_F15)
+#define MOU_MED_SPEED LGUI(KC_F16)
+#define MOUSE_LEFT LGUI(KC_F24)
+#define MOUSE_DOWN LGUI(KC_F23)
+#define MOUSE_UP LGUI(KC_F22)
+#define MOUSE_RIGHT LGUI(KC_F21)
+#define WHEEL_LEFT LGUI(KC_F20)
+#define WHEEL_DOWN LGUI(KC_F19)
+#define WHEEL_UP LGUI(KC_F18)
+#define WHEEL_RIGHT LGUI(KC_F17)
+#define RIGHT_CLICK MS_BTN2
+#define LEFT_CLICK LGUI(KC_F13)
+
 
 enum layers {
     BASE = 0,
@@ -24,25 +43,25 @@ enum layers {
 #define __________________BASE_R3__________________       KC_N,            KC_M,            KC_COMM,         KC_DOT,          KC_SLSH
 #define ______________BASE_THUMB_RIGHT_____________       LT(NUM, KC_ENT), LT(SYM, KC_BSPC)
 
-#define ___________________NAV_L1__________________       KC_BRID,         KC_BRIU,         HYPR(KC_4),      XXXXXXX,         XXXXXXX
+#define ___________________NAV_L1__________________       KC_BRID,         KC_BRIU,         SCREENSHOT,      XXXXXXX,         XXXXXXX
 #define ___________________NAV_L2__________________       KC_LGUI,         KC_LOPT,         KC_LCTL,         KC_LSFT,         XXXXXXX
 #define ___________________NAV_L3__________________       KC_VOLD,         KC_VOLU,         KC_MUTE,         TMUX_PREFIX,     XXXXXXX
 #define ______________NAV_THUMB_LEFT_______________       _______,         _______
 
 #define ___________________NAV_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         LSG(KC_TAB)
 #define ___________________NAV_R2__________________       KC_LEFT,         KC_DOWN,         KC_UP,           KC_RGHT,         LGUI(KC_TAB)
-#define ___________________NAV_R3__________________       KC_F23,          LSFT(KC_LEFT),   LSFT(KC_RIGHT),  KC_F24,          LGUI(KC_GRAVE)
+#define ___________________NAV_R3__________________       NAV_LEFT,        VIM_LEFT,        VIM_RIGHT,       NAV_RIGHT,       LGUI(KC_GRAVE)
 #define ______________NAV_THUMB_RIGHT______________       _______,          _______
 
 #define ___________________MOU_L1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define ___________________MOU_L2__________________       XXXXXXX,         LGUI(KC_F14),    LGUI(KC_F15),    LGUI(KC_F16),    XXXXXXX
+#define ___________________MOU_L2__________________       XXXXXXX,         MOU_MAX_SPEED,   MOU_MIN_SPEED,   MOU_MED_SPEED,   XXXXXXX
 #define ___________________MOU_L3__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define ______________MOU_THUMB_LEFT_______________       _______,         _______
 
 #define ___________________MOU_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define ___________________MOU_R2__________________       LGUI(KC_F24),    LGUI(KC_F23),    LGUI(KC_F22),    LGUI(KC_F21),    LGUI(KC_TAB)
-#define ___________________MOU_R3__________________       LGUI(KC_F20),    LGUI(KC_F19),    LGUI(KC_F18),    LGUI(KC_F17),    LGUI(KC_GRAVE)
-#define ______________MOU_THUMB_RIGHT______________       LGUI(KC_F13),    MS_BTN2
+#define ___________________MOU_R2__________________       MOUSE_LEFT,      MOUSE_DOWN,      MOUSE_UP,        MOUSE_RIGHT,    LGUI(KC_TAB)
+#define ___________________MOU_R3__________________       WHEEL_LEFT,      WHEEL_DOWN,      WHEEL_UP,        WHEEL_RIGHT,    LGUI(KC_GRAVE)
+#define ______________MOU_THUMB_RIGHT______________       LEFT_CLICK,      RIGHT_CLICK
 
 #define ___________________SYM_L1__________________       KC_AMPR,         KC_ASTR,         KC_LCBR,         KC_RCBR,         KC_GRV
 #define ___________________SYM_L2__________________       KC_CIRC,         KC_DLR,          KC_LPRN,         KC_RPRN,         KC_TILD

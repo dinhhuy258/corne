@@ -31,15 +31,15 @@ enum layers {
 #define ___________________NAV_R3__________________       KC_F23,          LSFT(KC_LEFT),   LSFT(KC_RIGHT),  KC_F24,          LGUI(KC_GRAVE)
 #define ______________NAV_THUMB_RIGHT______________       _______,          _______
 
-#define ___________________MOU_L1__________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
-#define ___________________MOU_L2__________________       LGUI_T(KC_A),    LALT_T(KC_S),    LCTL_T(KC_D),    LSFT_T(KC_F),    HYPR_T(KC_G)
-#define ___________________MOU_L3__________________       KC_Z,            KC_X,            KC_C,            KC_V,            KC_B
-#define ______________MOU_THUMB_LEFT_______________       KC_ESC,          KC_SPC
+#define ___________________MOU_L1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ___________________MOU_L2__________________       XXXXXXX,         LGUI(KC_F14),    LGUI(KC_F15),    LGUI(KC_F16),    XXXXXXX
+#define ___________________MOU_L3__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ______________MOU_THUMB_LEFT_______________       _______,         _______
 
-#define ___________________MOU_R1__________________       KC_Y,            KC_U,            KC_I,            KC_O,            KC_P
-#define ___________________MOU_R2__________________       HYPR_T(KC_H),    LSFT_T(KC_J),    LCTL_T(KC_K),    LALT_T(KC_L),    LGUI_T(KC_SCLN)
-#define ___________________MOU_R3__________________       KC_N,            KC_M,            KC_COMM,         KC_DOT,          KC_SLSH
-#define ______________MOU_THUMB_RIGHT______________       KC_ENT,          KC_BSPC
+#define ___________________MOU_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ___________________MOU_R2__________________       LGUI(KC_F24),    LGUI(KC_F23),    LGUI(KC_F22),    LGUI(KC_F21),    LGUI(KC_TAB)
+#define ___________________MOU_R3__________________       LGUI(KC_F20),    LGUI(KC_F19),    LGUI(KC_F18),    LGUI(KC_F17),    LGUI(KC_GRAVE)
+#define ______________MOU_THUMB_RIGHT______________       LGUI(KC_F13),    MS_BTN2
 
 #define ___________________SYM_L1__________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
 #define ___________________SYM_L2__________________       LGUI_T(KC_A),    LALT_T(KC_S),    LCTL_T(KC_D),    LSFT_T(KC_F),    HYPR_T(KC_G)

@@ -3,3 +3,15 @@
 // The combos' keys are always checked from layer BASE, even if other layers are active.
 // https://docs.qmk.fm/features/combo#layer-independent-combos
 #define COMBO_ONLY_FROM_LAYER 0
+#define COMBO_TERM 50
+
+#define MK_3_SPEED
+#define MK_MOMENTARY_ACCEL
+#define MK_C_OFFSET_0 4
+#define MK_C_INTERVAL_0 16
+#define MK_C_INTERVAL_1 8
+#define MK_C_OFFSET_1 16
+#define MK_C_OFFSET_2 40
+#define MK_C_INTERVAL_2 16
+
+#define TAPPING_TERM 200

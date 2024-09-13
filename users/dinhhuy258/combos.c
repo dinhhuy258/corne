@@ -1,3 +1,6 @@
+// The combos' keys are always checked from layer BASE, even if other layers are active.
+#define COMBO_ONLY_FROM_LAYER 0
+
 enum combos {
     VIM_QUIT,
     INPUT_SOURCE,
@@ -20,9 +23,9 @@ enum combos {
 */
 const uint16_t PROGMEM vim_quit_combo[]     = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM input_source_combo[] = {KC_Z, KC_SLSH, COMBO_END};
-const uint16_t PROGMEM caps_word_combo[]    = {KC_A, KC_SCLN, COMBO_END};
-const uint16_t PROGMEM tab_combo[]          = {KC_A, KC_S, COMBO_END};
-const uint16_t PROGMEM backspace_combo[]    = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM caps_word_combo[]    = {LGUI_T(KC_A), LGUI_T(KC_SCLN), COMBO_END};
+const uint16_t PROGMEM tab_combo[]          = {LOPT_T(KC_S), LCTL_T(KC_D), COMBO_END};
+const uint16_t PROGMEM backspace_combo[]    = {LCTL_T(KC_K), LALT_T(KC_L), COMBO_END};
 const uint16_t PROGMEM cut_combo[]          = {KC_X, KC_V, COMBO_END};
 const uint16_t PROGMEM copy_combo[]         = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM paste_combo[]        = {KC_C, KC_V, COMBO_END};

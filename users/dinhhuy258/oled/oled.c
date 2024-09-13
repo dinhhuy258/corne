@@ -17,6 +17,36 @@ bool oled_task_user(void) {
     }
 #endif
 
+    oled_set_cursor(0, 0);
+    oled_write("Layer", false);
+    oled_set_cursor(0, 1);
+    switch (get_highest_layer(layer_state)) {
+        case BASE:
+            oled_write("Base", false);
+
+            break;
+        case NAV:
+            oled_write("Nav ", false);
+
+            break;
+        case MOU:
+            oled_write("Mou ", false);
+
+            break;
+        case SYM:
+            oled_write("Sym ", false);
+
+            break;
+        case NUM:
+            oled_write("Num ", false);
+
+            break;
+        default:
+            oled_write("    ", false);
+
+            break;
+    }
+
     render_dog(0, 13);
 
     return false;

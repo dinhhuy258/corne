@@ -23,7 +23,6 @@
 #define RIGHT_CLICK MS_BTN2
 #define LEFT_CLICK LGUI(KC_F13)
 
-
 enum layers {
     BASE = 0,
     NAV,

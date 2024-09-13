@@ -2,9 +2,9 @@
 #include "dinhhuy258.h"
 #include "swapper.h"
 
-bool space_pressed = false;
-bool switch_app_active = false;
-uint32_t process_timer = 0;
+bool     space_pressed     = false;
+bool     switch_app_active = false;
+uint32_t process_timer     = 0;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     process_timer = timer_read32();

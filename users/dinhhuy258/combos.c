@@ -1,6 +1,3 @@
-// The combos' keys are always checked from layer BASE, even if other layers are active.
-#define COMBO_ONLY_FROM_LAYER 0
-
 enum combos {
     VIM_QUIT,
     INPUT_SOURCE,

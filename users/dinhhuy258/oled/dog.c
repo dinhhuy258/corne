@@ -2,8 +2,8 @@
 #include "dinhhuy258.h"
 #include "process_records.h"
 
-// Dog animation settings wpm
-#define DOG_RUN_WPM 20
+// The idie time in milliseconds that dog transform from run to sit
+#define RUN_TO_SIT_IDLE_TIME_MS 1000
 
 // How long each frame lasts in ms
 #define ANIM_FRAME_DURATION 200
@@ -32,7 +32,7 @@ static const char PROGMEM bark[ANIM_FRAMES][ANIM_SIZE] = {{
 uint32_t anim_timer    = 0;
 uint8_t  current_frame = 0;
 
-void animate_dog(uint8_t dog_x, uint8_t dog_y, uint8_t current_wpm) {
+void animate_dog(uint8_t dog_x, uint8_t dog_y) {
     oled_set_cursor(dog_x, dog_y);
 
     current_frame = (current_frame + 1) % ANIM_FRAMES;
@@ -40,16 +40,16 @@ void animate_dog(uint8_t dog_x, uint8_t dog_y, uint8_t current_wpm) {
     bool is_barking = is_space_pressed();
     if (is_barking) {
         oled_write_raw_P(bark[current_frame], ANIM_SIZE);
-    } else if (current_wpm <= DOG_RUN_WPM) {
+    } else if (timer_elapsed32(get_process_timer()) > RUN_TO_SIT_IDLE_TIME_MS) {
         oled_write_raw_P(sit[current_frame], ANIM_SIZE);
     } else {
         oled_write_raw_P(run[current_frame], ANIM_SIZE);
     }
 }
 
-void render_dog(uint8_t dog_x, uint8_t dog_y, uint8_t current_wpm) {
+void render_dog(uint8_t dog_x, uint8_t dog_y) {
     if (timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION) {
         anim_timer = timer_read32();
-        animate_dog(dog_x, dog_y, current_wpm);
+        animate_dog(dog_x, dog_y);
     }
 }

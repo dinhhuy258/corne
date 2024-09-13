@@ -17,7 +17,7 @@ bool oled_task_user(void) {
     }
 #endif
 
-    render_dog(0, 13, get_current_wpm());
+    render_dog(0, 13);
 
     return false;
 }

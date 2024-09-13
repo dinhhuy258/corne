@@ -43,6 +43,19 @@ combo_t key_combos[] = {
 };
 // clang-format on
 
+bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
+    switch (combo_index) {
+        case VIM_QUIT:
+        case INPUT_SOURCE:
+        case CAPS_WORD:
+        case TAB:
+        case BACKSPACE:
+            return layer_state_is(BASE);
+    }
+
+    return true;
+}
+
 void process_combo_event(uint16_t combo_index, bool pressed) {
     switch (combo_index) {
         case VIM_QUIT:

@@ -19,18 +19,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     update_swapper(&switch_app_active, KC_LGUI, KC_TAB, SWITCH_APP, switch_app_ignore_key_positions, switch_app_ignore_key_positions_size, keycode, record);
 
-    switch (keycode) {
-        case KC_SPC:
-            space_pressed = record->event.pressed;
-
-            break;
-    }
-
     return true;
-}
-
-bool is_space_pressed() {
-    return space_pressed;
 }
 
 uint32_t get_process_timer() {

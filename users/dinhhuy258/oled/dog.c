@@ -37,8 +37,7 @@ void animate_dog(uint8_t dog_x, uint8_t dog_y) {
 
     current_frame = (current_frame + 1) % ANIM_FRAMES;
 
-    bool is_barking = is_space_pressed();
-    if (is_barking) {
+    if (is_caps_word_on()) {
         oled_write_raw_P(bark[current_frame], ANIM_SIZE);
     } else if (timer_elapsed32(get_process_timer()) > RUN_TO_SIT_IDLE_TIME_MS) {
         oled_write_raw_P(sit[current_frame], ANIM_SIZE);

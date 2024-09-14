@@ -10,4 +10,4 @@
 //     nav down, trigger, nav up -> nav down, cmd down, tab, cmd up, nav up
 //
 // This behaviour is useful for more than just cmd-tab, hence: cmdish, tabish.
-void update_swapper(bool *active, uint16_t cmdish, uint16_t tabish, uint16_t trigger, uint16_t keycode, keyrecord_t *record);
+void update_swapper(bool *active, uint16_t cmdish, uint16_t tabish, uint16_t trigger, keypos_t ignored_key_positions[], uint8_t ignored_key_positions_size, uint16_t keycode, keyrecord_t *record);

@@ -10,6 +10,9 @@ MOUSEKEY_ENABLE = yes
 CAPS_WORD_ENABLE = yes
 COMBO_ENABLE = yes
 
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
+
 # Enables Link Time Optimization (LTO) when compiling the keyboard.
 # This makes the process take longer, but it can significantly reduce the compiled size.
 LTO_ENABLE = yes

@@ -1,3 +1,5 @@
+#include "dinhhuy258.h"
+
 enum combos {
     VIM_QUIT,
     INPUT_SOURCE,

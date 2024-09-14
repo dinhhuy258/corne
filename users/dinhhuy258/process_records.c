@@ -8,6 +8,8 @@ uint32_t process_timer                     = 0;
 keypos_t switch_app_ignore_key_positions[] = {
 #   if defined(KEYBOARD_crkbd)
     {.col = 1, .row = 4},
+#   elif defined(KEYBOARD_ergodox_ez)
+    {.col = 1, .row = 12},
 #   endif
 };
 uint8_t switch_app_ignore_key_positions_size = ARRAY_SIZE(switch_app_ignore_key_positions);

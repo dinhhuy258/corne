@@ -56,8 +56,8 @@ enum keycodes {
 #define ___________________NAV_R3__________________       NAV_LEFT,        VIM_LEFT,        VIM_RIGHT,       NAV_RIGHT,       LGUI(KC_GRAVE)
 #define ______________NAV_THUMB_RIGHT______________       _______,          _______
 
-#define ___________________MOU_L1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define ___________________MOU_L2__________________       XXXXXXX,         MOU_MAX_SPEED,   MOU_MIN_SPEED,   MOU_MED_SPEED,   XXXXXXX
+#define ___________________MOU_L1__________________       XXXXXXX,         MOU_MAX_SPEED,   MOU_MIN_SPEED,   MOU_MED_SPEED,   XXXXXXX
+#define ___________________MOU_L2__________________       KC_LGUI,         KC_LOPT,         KC_LCTL,         KC_LSFT,         XXXXXXX
 #define ___________________MOU_L3__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define ______________MOU_THUMB_LEFT_______________       _______,         _______
 

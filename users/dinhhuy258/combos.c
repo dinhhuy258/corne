@@ -51,8 +51,9 @@ bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode
         case INPUT_SOURCE:
         case CAPS_WORD:
         case TAB:
-        case BACKSPACE:
             return layer_state_is(BASE);
+        case BACKSPACE:
+            return layer_state_is(BASE) || layer_state_is(NUM) || layer_state_is(SYM);
     }
 
     return true;

@@ -75,12 +75,12 @@ enum keycodes {
 #define ___________________SYM_R3__________________       KC_QUOT,         KC_DQUO,         KC_COMM,         KC_DOT,          KC_SLSH
 #define ______________SYM_THUMB_RIGHT______________       _______,         _______
 
-#define ___________________NUM_L1__________________       KC_MINS,         KC_7,            KC_8,            KC_9,            KC_PLUS
-#define ___________________NUM_L2__________________       KC_BSLS,         KC_4,            KC_5,            KC_6,            KC_ASTR
-#define ___________________NUM_L3__________________       KC_0,            KC_1,            KC_2,            KC_3,            KC_EQL
+#define ___________________NUM_L1__________________       XXXXXXX,         KC_7,            KC_8,            KC_9,            XXXXXXX
+#define ___________________NUM_L2__________________       XXXXXXX,         KC_4,            KC_5,            KC_6,            XXXXXXX
+#define ___________________NUM_L3__________________       KC_0,            KC_1,            KC_2,            KC_3,            XXXXXXX
 #define ______________NUM_THUMB_LEFT_______________       _______,         _______
 
-#define ___________________NUM_R1__________________       XXXXXXX,         VIM_PREFIX,      XXXXXXX,         XXXXXXX,         KC_PERC
+#define ___________________NUM_R1__________________       XXXXXXX,         VIM_PREFIX,      XXXXXXX,         XXXXXXX,         XXXXXXX
 #define ___________________NUM_R2__________________       XXXXXXX,         KC_LSFT,         KC_LCTL,         KC_LOPT,         KC_LGUI
-#define ___________________NUM_R3__________________       XXXXXXX,         TMUX_PREFIX,     KC_COMM,         KC_DOT,          KC_SLSH
+#define ___________________NUM_R3__________________       XXXXXXX,         TMUX_PREFIX,     KC_COMM,         KC_DOT,          XXXXXXX
 #define ______________NUM_THUMB_RIGHT______________       _______,         _______

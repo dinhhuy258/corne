@@ -1,5 +1,5 @@
 #include "dinhhuy258.h"
-#include "dog.h"
+#include "luna.h"
 #include "bongocat.h"
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
@@ -11,7 +11,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 }
 
 void oled_render_master(void) {
-    render_dog(0, 13);
+    render_luna(0, 13);
 }
 
 void oled_render_slave(void) {

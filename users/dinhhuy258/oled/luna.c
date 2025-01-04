@@ -32,8 +32,8 @@ static const char PROGMEM luna_barks[LUNA_ANIM_FRAMES][LUNA_ANIM_SIZE] = {{
 uint32_t luna_anim_timer    = 0;
 uint8_t  luna_current_frame = 0;
 
-void animate_luna(uint8_t dog_x, uint8_t dog_y) {
-    oled_set_cursor(dog_x, dog_y);
+void animate_luna(uint8_t luna_x, uint8_t luna_y) {
+    oled_set_cursor(luna_x, luna_y);
 
     luna_current_frame = (luna_current_frame + 1) % LUNA_ANIM_FRAMES;
 
@@ -46,9 +46,9 @@ void animate_luna(uint8_t dog_x, uint8_t dog_y) {
     }
 }
 
-void render_luna(uint8_t dog_x, uint8_t dog_y) {
+void render_luna(uint8_t luna_x, uint8_t luna_y) {
     if (timer_elapsed32(luna_anim_timer) > LUNA_ANIM_FRAME_DURATION) {
         luna_anim_timer = timer_read32();
-        animate_luna(dog_x, dog_y);
+        animate_luna(luna_x, luna_y);
     }
 }

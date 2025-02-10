@@ -55,29 +55,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 // clang-format on
-
-uint8_t layer_state_set_user(uint8_t state) {
-    uint8_t layer = biton(state);
-    ergodox_board_led_off();
-    ergodox_right_led_1_off();
-    ergodox_right_led_2_off();
-    ergodox_right_led_3_off();
-    switch (layer) {
-        case NAV:
-            ergodox_right_led_1_on();
-            break;
-        case SYM:
-            ergodox_right_led_2_on();
-            break;
-        case NUM:
-            ergodox_right_led_3_on();
-            break;
-        case MOU:
-            ergodox_right_led_1_on();
-            ergodox_right_led_2_on();
-            break;
-        default:
-            break;
-    }
-    return state;
-}

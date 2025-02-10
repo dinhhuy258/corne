@@ -1,6 +1,6 @@
 include $(USER_PATH)/oled/rules.mk
 
-SRC += $(USER_PATH)/process_records.c
+SRC += $(USER_PATH)/dinhhuy258.c
 SRC += $(USER_PATH)/caps_word.c
 SRC += $(USER_PATH)/swapper.c
 # https://github.com/qmk/qmk_firmware/issues/21137#issuecomment-1577898767

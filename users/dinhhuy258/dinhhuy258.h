@@ -21,6 +21,23 @@
 #define WHEEL_RIGHT MS_WHLR
 #define RIGHT_CLICK MS_BTN2
 #define LEFT_CLICK MS_BTN1
+#define WM_FOCUS_LEFT LOPT(LCTL(KC_H))
+#define WM_FOCUS_DOWN LOPT(LCTL(KC_J))
+#define WM_FOCUS_UP LOPT(LCTL(KC_K))
+#define WM_FOCUS_RIGHT LOPT(LCTL(KC_L))
+#define WM_FULLSCREEN LOPT(LCTL(KC_F))
+#define WM_TOGGLE_FT LOPT(LCTL(KC_SCLN))
+#define WM_CLOSE LOPT(LCTL(KC_C))
+#define WM_WS_1 LOPT(LCTL(KC_1))
+#define WM_WS_2 LOPT(LCTL(KC_2))
+#define WM_WS_3 LOPT(LCTL(KC_3))
+#define WM_WS_4 LOPT(LCTL(KC_4))
+#define WM_WS_5 LOPT(LCTL(KC_5))
+#define WM_MOVE_WS_1 LOPT(LCTL(LSFT(KC_1)))
+#define WM_MOVE_WS_2 LOPT(LCTL(LSFT(KC_2)))
+#define WM_MOVE_WS_3 LOPT(LCTL(LSFT(KC_3)))
+#define WM_MOVE_WS_4 LOPT(LCTL(LSFT(KC_4)))
+#define WM_MOVE_WS_5 LOPT(LCTL(LSFT(KC_5)))
 
 enum layers {
     BASE = 0,
@@ -28,6 +45,7 @@ enum layers {
     MOU,
     SYM,
     NUM,
+    WM,
 };
 
 enum keycodes {
@@ -84,3 +102,13 @@ enum keycodes {
 #define ___________________NUM_R2__________________       XXXXXXX,         KC_LSFT,         KC_LCTL,         KC_LOPT,         KC_LGUI
 #define ___________________NUM_R3__________________       XXXXXXX,         TMUX_PREFIX,     KC_COMM,         KC_DOT,          XXXXXXX
 #define ______________NUM_THUMB_RIGHT______________       _______,         _______
+
+#define ___________________WM_L1___________________       WM_WS_1,         WM_WS_2,         WM_WS_3,         WM_WS_4,         WM_WS_5
+#define ___________________WM_L2___________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         WM_FULLSCREEN,   XXXXXXX
+#define ___________________WM_L3___________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ______________WM_THUMB_LEFT________________       _______,         _______
+
+#define ___________________WM_R1___________________       WM_MOVE_WS_1,    WM_MOVE_WS_2,    WM_MOVE_WS_3,    WM_MOVE_WS_4,    WM_MOVE_WS_5
+#define ___________________WM_R2___________________       WM_FOCUS_LEFT,   WM_FOCUS_DOWN,   WM_FOCUS_UP,     WM_FOCUS_RIGHT,  WM_TOGGLE_FT
+#define ___________________WM_R3___________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ______________WM_THUMB_RIGHT_______________       _______,         _______

@@ -25,19 +25,23 @@
 #define WM_FOCUS_DOWN LOPT(LCTL(KC_J))
 #define WM_FOCUS_UP LOPT(LCTL(KC_K))
 #define WM_FOCUS_RIGHT LOPT(LCTL(KC_L))
-#define WM_FULLSCREEN LOPT(LCTL(KC_F))
+#define WM_FULLSCREEN LOPT(LCTL(KC_A))
 #define WM_TOGGLE_FT LOPT(LCTL(KC_SCLN))
 #define WM_CLOSE LOPT(LCTL(KC_C))
-#define WM_WS_1 LOPT(LCTL(KC_1))
-#define WM_WS_2 LOPT(LCTL(KC_2))
-#define WM_WS_3 LOPT(LCTL(KC_3))
-#define WM_WS_4 LOPT(LCTL(KC_4))
-#define WM_WS_5 LOPT(LCTL(KC_5))
-#define WM_MOVE_WS_1 LOPT(LCTL(LSFT(KC_1)))
-#define WM_MOVE_WS_2 LOPT(LCTL(LSFT(KC_2)))
-#define WM_MOVE_WS_3 LOPT(LCTL(LSFT(KC_3)))
-#define WM_MOVE_WS_4 LOPT(LCTL(LSFT(KC_4)))
-#define WM_MOVE_WS_5 LOPT(LCTL(LSFT(KC_5)))
+#define WM_WS_1 LOPT(LCTL(KC_Q))
+#define WM_WS_2 LOPT(LCTL(KC_W))
+#define WM_WS_3 LOPT(LCTL(KC_E))
+#define WM_WS_4 LOPT(LCTL(KC_R))
+#define WM_WS_5 LOPT(LCTL(KC_T))
+#define WM_MOVE_WS_1 LOPT(LCTL(LSFT(KC_Y)))
+#define WM_MOVE_WS_2 LOPT(LCTL(LSFT(KC_U)))
+#define WM_MOVE_WS_3 LOPT(LCTL(LSFT(KC_I)))
+#define WM_MOVE_WS_4 LOPT(LCTL(LSFT(KC_O)))
+#define WM_MOVE_WS_5 LOPT(LCTL(LSFT(KC_P)))
+#define WM_RESIZE_DEC LOPT(LCTL(KC_S))
+#define WM_RESIZE_INC LOPT(LCTL(KC_D))
+#define WM_L_ACCORDION LOPT(LCTL(KC_F))
+#define WM_L_TILES LOPT(LCTL(KC_G))
 
 enum layers {
     BASE = 0,
@@ -104,8 +108,8 @@ enum keycodes {
 #define ______________NUM_THUMB_RIGHT______________       _______,         _______
 
 #define ___________________WM_L1___________________       WM_WS_1,         WM_WS_2,         WM_WS_3,         WM_WS_4,         WM_WS_5
-#define ___________________WM_L2___________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         WM_FULLSCREEN,   XXXXXXX
-#define ___________________WM_L3___________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ___________________WM_L2___________________       WM_FULLSCREEN,   WM_RESIZE_DEC,   WM_RESIZE_INC,   WM_L_TILES,      WM_L_ACCORDION
+#define ___________________WM_L3___________________       XXXXXXX,         XXXXXXX,         WM_CLOSE,        XXXXXXX,         XXXXXXX
 #define ______________WM_THUMB_LEFT________________       _______,         _______
 
 #define ___________________WM_R1___________________       WM_MOVE_WS_1,    WM_MOVE_WS_2,    WM_MOVE_WS_3,    WM_MOVE_WS_4,    WM_MOVE_WS_5

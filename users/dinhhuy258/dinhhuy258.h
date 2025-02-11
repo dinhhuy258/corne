@@ -38,6 +38,7 @@
 #define WM_MOVE_WS_3 LOPT(LCTL(LSFT(KC_I)))
 #define WM_MOVE_WS_4 LOPT(LCTL(LSFT(KC_O)))
 #define WM_MOVE_WS_5 LOPT(LCTL(LSFT(KC_P)))
+#define WM_MOVE_MONITOR LOPT(LCTL(LSFT(KC_M)))
 #define WM_RESIZE_DEC LOPT(LCTL(KC_S))
 #define WM_RESIZE_INC LOPT(LCTL(KC_D))
 #define WM_L_ACCORDION LOPT(LCTL(KC_F))
@@ -114,5 +115,5 @@ enum keycodes {
 
 #define ___________________WM_R1___________________       WM_MOVE_WS_1,    WM_MOVE_WS_2,    WM_MOVE_WS_3,    WM_MOVE_WS_4,    WM_MOVE_WS_5
 #define ___________________WM_R2___________________       WM_FOCUS_LEFT,   WM_FOCUS_DOWN,   WM_FOCUS_UP,     WM_FOCUS_RIGHT,  WM_TOGGLE_FT
-#define ___________________WM_R3___________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ___________________WM_R3___________________       XXXXXXX,         WM_MOVE_MONITOR, XXXXXXX,         XXXXXXX,         XXXXXXX
 #define ______________WM_THUMB_RIGHT_______________       _______,         _______

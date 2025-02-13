@@ -39,8 +39,8 @@
 #define WM_MOVE_WS_4 LOPT(LCTL(LSFT(KC_O)))
 #define WM_MOVE_WS_5 LOPT(LCTL(LSFT(KC_P)))
 #define WM_MOVE_MONITOR LOPT(LCTL(LSFT(KC_M)))
-#define WM_RESIZE_DEC LOPT(LCTL(LSFT(KC_S)))
-#define WM_RESIZE_INC LOPT(LCTL(LSFT(KC_D)))
+#define WM_MODE_RESIZE LOPT(LCTL(LSFT(KC_S)))
+#define WM_MODE_MOVE LOPT(LCTL(LSFT(KC_D)))
 #define WM_L_ACCORDION LOPT(LCTL(LSFT(KC_F)))
 #define WM_L_TILES LOPT(LCTL(LSFT(KC_G)))
 #define WM_MODE_JOIN LOPT(LCTL(LSFT(KC_Z)))
@@ -110,7 +110,7 @@ enum keycodes {
 #define ______________NUM_THUMB_RIGHT______________       _______,         _______
 
 #define ___________________WM_L1___________________       WM_WS_1,         WM_WS_2,         WM_WS_3,         WM_WS_4,         WM_WS_5
-#define ___________________WM_L2___________________       WM_FULLSCREEN,   WM_RESIZE_DEC,   WM_RESIZE_INC,   WM_L_TILES,      WM_L_ACCORDION
+#define ___________________WM_L2___________________       WM_FULLSCREEN,   WM_MODE_RESIZE,  WM_MODE_MOVE,    WM_L_TILES,      WM_L_ACCORDION
 #define ___________________WM_L3___________________       WM_MODE_JOIN,    XXXXXXX,         WM_CLOSE,        XXXXXXX,         XXXXXXX
 #define ______________WM_THUMB_LEFT________________       _______,         _______
 
